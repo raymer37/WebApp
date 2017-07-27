@@ -1,0 +1,24 @@
+﻿<!DOCTYPE html>
+<title>Chat</title>
+<html>
+<head>
+<script language='JavaScript'>
+    function getwords() {
+        myOutput = document.getElementById('output');
+        textbox = document.getElementById('words');
+        if (textbox.value != "")
+            myOutput.innerHTML.write("You entered: " + textbox.value)
+        else{}
+    }
+</script>
+</head>
+<body>
+<p>
+    <input type="text" id="words" />
+    <input type="button" onclick="getwords()" value="Enter" />
+</p>
+<p>
+<div id="output"></div>
+</p>
+</body>
+</html>

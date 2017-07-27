@@ -1,15 +1,15 @@
 ﻿<!DOCTYPE html>
-<title>Matt Raymer</title>
+<title>Yahar'gul Blood Bank</title>
 <html lang="en">
 <head>
     <meta charset="utf-8">
     <style type="text/css">
         * {
-            font-family: arial, sans-serif;
+            font-family: arial;
         }
     </style>
-
     <style>
+
         ul {
             list-style-type: none;
             margin: 0;
@@ -24,7 +24,7 @@
 
             li a {
                 display: block;
-                color: white;
+                color: yellow;
                 text-align: center;
                 padding: 16px;
                 text-decoration: none;
@@ -33,16 +33,51 @@
                 li a:hover {
                     background-color: #111111;
                 }
+
     </style>
 </head>
 <body>
-
     <ul>
         <li><a href="/index.html">Home</a></li>
-        <li><a href="/projects.html">Projects</a></li>
-        <li><a href="/contact.html">Contact</a></li>
-        <li><a href="/about.html">About</a></li>
     </ul>
+    <h1> <img src="images/bloodvial.png" alt="bloodvial" width="50" height="50">Yahar'gul Blood Bank</h1>
 
+    <script>
+    var username = "matt";
+    var password = "abc123";
+
+    function login() {
+        var usernameGuess = document.getElementById("username").value;
+        var passwordGuess = document.getElementById("password").value;
+        if (usernameGuess == username && passwordGuess == password) {
+            window.location.href = "account.html";
+        }
+        else {
+            var output = document.getElementById("output");
+            output.innerHTML = "Incorrect username/password combination";
+        }
+    }
+    </script>
+
+    <p1>
+        Username:<input type="text" id="username" style="margin-left:5px"/> <br>
+        Password:<input type="password" id="password" style="margin-left:8px"/> <br>
+        <button onclick="login()">Login</button>
+    </p1>
+    <br>
+    <br>
+    <div id="output" style="color:red;"></div>
+
+    <script>
+    function httpGetAsync(theUrl, callback) {
+        var xmlHttp = new XMLHttpRequest();
+        xmlHttp.onreadystatechange = function() {
+            if (xmlHttp.readyState == 4 && xmlHttp.status == 200)
+                callback(xmlHttp.responseText);
+        }
+        xmlHttp.open("GET", theUrl, true); // true for asynchronous
+        xmlHttp.send(null);
+    }
+    </script>
 </body>
 </html>

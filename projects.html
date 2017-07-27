@@ -37,6 +37,19 @@
         ul.list2 {
             list-style-type: none;
         }
+
+        a:link.list2, a:visited.list2 {
+            background-color: darkred;
+            color: white;
+            padding: 14px 25px;
+            text-align: center;
+            text-decoration: none;
+            display: inline-block;
+        }
+
+        a:hover.list2, a:active.list2 {
+            background-color: red;
+        }
     </style>
 </head>
 <body>
@@ -46,8 +59,9 @@
         <li class="list1"> <a class="list1" href="/contact.html">Contact</a></li>
         <li class="list1"> <a class="list1" href="/about.html">About</a></li>
     </ul>
+    <h1>Personal Programming Projects</h1>
     <ul class="list2">
-        <li> <a href="/webapp.html">Web App</a></li>
+        <li> <a class="list2" href="/webapp.html">Web App</a></li>
     </ul>
 
 </body>
